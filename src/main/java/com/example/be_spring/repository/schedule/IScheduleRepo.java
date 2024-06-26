@@ -1,4 +1,7 @@
-package com.example.spring_cinema.repository.schedule;
+package com.example.be_spring.repository.schedule;
 
-public interface IScheduleRepo {
+import com.example.be_spring.model.Schedule;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IScheduleRepo extends JpaRepository<Schedule, Integer> {
 }

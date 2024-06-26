@@ -1,4 +1,7 @@
-package com.example.spring_cinema.repository.room;
+package com.example.be_spring.repository.room;
 
-public interface IRoomRepo {
+import com.example.be_spring.model.Room;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IRoomRepo extends JpaRepository<Room, Integer> {
 }

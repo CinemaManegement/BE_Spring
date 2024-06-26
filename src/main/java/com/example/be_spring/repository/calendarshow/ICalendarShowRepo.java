@@ -1,6 +1,7 @@
-package com.example.spring_cinema.repository.calendarshow;
+package com.example.be_spring.repository.calendarshow;
 
-import com.example.spring_cinema.model.CalendarShow;
+
+import com.example.be_spring.model.CalendarShow;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ICalendarShowRepo extends JpaRepository<CalendarShow,Integer> {

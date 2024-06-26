@@ -1,4 +1,4 @@
-package com.example.spring_cinema.model;
+package com.example.be_spring.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;

@@ -1,4 +1,7 @@
-package com.example.spring_cinema.repository.movietype;
+package com.example.be_spring.repository.movietype;
 
-public interface IMovieTypeRepo {
+import com.example.be_spring.model.MovieType;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IMovieTypeRepo extends JpaRepository<MovieType, Integer> {
 }

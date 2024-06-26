@@ -1,4 +1,7 @@
-package com.example.spring_cinema.repository.ticket;
+package com.example.be_spring.repository.ticket;
 
-public interface ITicketRepo {
+import com.example.be_spring.model.Ticket;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ITicketRepo extends JpaRepository<Ticket, Integer> {
 }

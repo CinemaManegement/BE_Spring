@@ -1,8 +1,9 @@
-package com.example.spring_cinema.model;
+package com.example.be_spring.model;
 
 import jakarta.persistence.*;
 
 import java.util.List;
+
 
 @Entity
 public class MovieType {

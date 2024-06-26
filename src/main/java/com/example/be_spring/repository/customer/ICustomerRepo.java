@@ -1,4 +1,7 @@
-package com.example.spring_cinema.repository.customer;
+package com.example.be_spring.repository.customer;
 
-public interface ICustomerRepo {
+import com.example.be_spring.model.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ICustomerRepo extends JpaRepository<Customer, Integer> {
 }
