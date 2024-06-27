@@ -1,6 +1,7 @@
 package com.example.spring_cinema.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.sql.Time;
@@ -13,7 +14,7 @@ public class Schedule {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "schedule_id")
     private int id;
-
+    @Column(columnDefinition = "Date")
     private Date showDate;
 
     private Time showTime;

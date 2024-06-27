@@ -1,13 +1,16 @@
 package com.example.spring_cinema.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ticket_id")
-    private int id;
+    private int ticketId;
 
     @ManyToOne
     @JoinColumn(name = "calendar_show_id",referencedColumnName = "calendar_show_id")
@@ -17,21 +20,25 @@ public class Ticket {
     @JoinColumn(name = "invoice_id",referencedColumnName = "invoice_id")
     private Invoice invoice;
 
+    @OneToMany(mappedBy = "ticket")
+    @JsonBackReference
+    private List<Seat> seat;
+
     public Ticket() {
     }
 
-    public Ticket(int id, CalendarShow calendarShow, Invoice invoice) {
-        this.id = id;
+    public Ticket(int ticketId, CalendarShow calendarShow, Invoice invoice) {
+        this.ticketId = ticketId;
         this.calendarShow = calendarShow;
         this.invoice = invoice;
     }
 
-    public int getId() {
-        return id;
+    public int getTicketId() {
+        return ticketId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setTicketId(int ticketId) {
+        this.ticketId = ticketId;
     }
 
     public CalendarShow getCalendarShow() {

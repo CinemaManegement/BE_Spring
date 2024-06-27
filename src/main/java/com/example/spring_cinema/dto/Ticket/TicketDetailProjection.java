@@ -1,4 +1,4 @@
-package com.example.spring_cinema.dto;
+package com.example.spring_cinema.dto.Ticket;
 
 import java.sql.Time;
 import java.util.Date;
@@ -12,4 +12,5 @@ public interface TicketDetailProjection {
     Integer getCustomerId();
     String getIdCard();
     String getFullName();
+    String getPhone();
 }

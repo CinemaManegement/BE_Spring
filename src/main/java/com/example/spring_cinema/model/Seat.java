@@ -21,6 +21,10 @@ public class Seat {
     @JoinColumn(name = "room_id",referencedColumnName = "room_id")
     private Room room;
 
+    @ManyToOne
+    @JoinColumn(name = "ticket_id", referencedColumnName = "ticket_id")
+    private Ticket ticket;
+
     public Seat() {
     }
 

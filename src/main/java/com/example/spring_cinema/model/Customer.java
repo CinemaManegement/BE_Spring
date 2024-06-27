@@ -11,7 +11,7 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "customer_id")
-    private int id;
+    private int customerId;
 
     private String fullName;
 
@@ -37,8 +37,8 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(int id, String fullName, Date birthDay, Boolean gender, String idCard, String email, String address, String phone, Account account, List<Invoice> invoices) {
-        this.id = id;
+    public Customer(int customerId, String fullName, Date birthDay, Boolean gender, String idCard, String email, String address, String phone, Account account, List<Invoice> invoices) {
+        this.customerId = customerId;
         this.fullName = fullName;
         this.birthDay = birthDay;
         this.gender = gender;
@@ -58,12 +58,12 @@ public class Customer {
         this.invoices = invoices;
     }
 
-    public int getId() {
-        return id;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     public String getFullName() {
